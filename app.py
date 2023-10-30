@@ -1,7 +1,7 @@
 import streamlit as st
 from PIL import Image
 
-st.title("Quesos Arequipeños")
+st.title("Queso Arequipeños")
 st.header('Información', divider=True)
 with st.container():
         st.subheader("Descripción", divider=True)
