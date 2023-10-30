@@ -1,15 +1,15 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 
-import admin, app
+import admin, home
 
 class MultiApp:
     def __init__(self):
         self.apps = []
-    def add_app(self, title, fun): 
+    def add_app(self, title, function): 
         self.apps.append({
             "title":title,
-            "function":func
+            "function":function
         })
 
     def run():
@@ -21,3 +21,10 @@ class MultiApp:
                 menu_icon="cast",
                 default_index=1,
             )
+
+        if app == "Admin":
+            admin.app()
+        elif app == "Home":
+            home.app()
+
+    run()
