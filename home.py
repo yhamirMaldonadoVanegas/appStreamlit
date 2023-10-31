@@ -33,4 +33,3 @@ def app():
                 with col3:
                         st.header("Tipo C")
                         st.image(Image.open("img/queso2.jpg"), caption="Queso3")
-

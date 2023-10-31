@@ -11,20 +11,18 @@ class MultiApp:
             "title":title,
             "function":function
         })
-
     def run():
         with st.sidebar:
             app = option_menu(
                 menu_title="Menu",
-                options=["Admin","Home"],
-                icons=["person-circle","house"],
+                options=["Home","Admin"],
+                icons=["house","person-circle"],
                 menu_icon="cast",
                 default_index=1,
             )
-
         if app == "Admin":
             admin.app()
-        elif app == "Home":
+        if app == "Home":
             home.app()
 
     run()
